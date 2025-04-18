@@ -1,0 +1,182 @@
+/* page.module.css for BroadcastPage */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  
+  .header {
+    margin-bottom: 1.5rem;
+  }
+  
+  .title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+  
+  .statusContainer {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .statusItem {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .statusLabel {
+    font-weight: 500;
+    color: #555;
+  }
+  
+  .statusValue {
+    font-weight: 600;
+  }
+  
+  .connected {
+    color: #10b981;
+  }
+  
+  .disconnected {
+    color: #ef4444;
+  }
+  
+  .live {
+    color: #ef4444;
+  }
+  
+  .idle {
+    color: #6b7280;
+  }
+  
+  .videoContainer {
+    position: relative;
+    width: 100%;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    background-color: #111;
+    aspect-ratio: 16/9;
+  }
+  
+  .video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem;
+  }
+  
+  .noVideoOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1f2937;
+    color: #9ca3af;
+    font-size: 1.1rem;
+  }
+  
+  .controlsContainer {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.375rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+    min-width: 140px;
+  }
+  
+  .startButton {
+    background-color: #10b981;
+    color: white;
+  }
+  
+  .startButton:hover:not(:disabled) {
+    background-color: #059669;
+  }
+  
+  .stopButton {
+    background-color: #ef4444;
+    color: white;
+  }
+  
+  .stopButton:hover:not(:disabled) {
+    background-color: #dc2626;
+  }
+  
+  .button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
+  .statusMessage {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin-top: 0.5rem;
+  }
+  
+  .liveIndicator {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .liveIndicatorDot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ef4444;
+    animation: pulse 1.5s infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .container {
+      padding: 1rem;
+    }
+    
+    .title {
+      font-size: 1.5rem;
+    }
+    
+    .statusContainer {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    
+    .button {
+      padding: 0.625rem 1.25rem;
+    }
+  }
